@@ -5,6 +5,9 @@ def mouv(event):
 def temps():
     pass
 
+def passager():
+    pass
+
 def random_siege():
     pass
 def random_bagage():
