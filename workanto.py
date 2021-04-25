@@ -1,7 +1,7 @@
 import tkinter as tk 
 
-HEIGHT = 1500
-WIDTH = 350
+HEIGHT = 750
+WIDTH = 175
 largeur_case = WIDTH // 7
 hauteur_case = HEIGHT // 30
 
@@ -15,6 +15,10 @@ def avion():
             else:
                 color = "blue"
             canvas.create_rectangle((i*largeur_case, j*hauteur_case),((i+1)*largeur_case, (j+1)*hauteur_case), fill=color)
+
+def passager():
+    pass
+
 
 racine = tk.Tk() # Création de la fenêtre racine
 avion()
