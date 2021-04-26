@@ -9,7 +9,6 @@ class Passenger :
             self.numeroy = numeroy
             self.bagage = bagage
             print("bienvenue au passager", "place", numerox,numeroy,"avec nb bagage",bagage)
-
 def liste_passager():
     for i in range(7):
         for j in range(30):
