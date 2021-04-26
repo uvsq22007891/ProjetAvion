@@ -8,7 +8,6 @@ largeur_case = WIDTH // 7
 hauteur_case = HEIGHT // 30
 place = [[0]*7 for i in range(30)]
 
-
 def avion():
     canvas.grid()
     for i in range(7):
