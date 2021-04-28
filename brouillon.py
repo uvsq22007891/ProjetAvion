@@ -1,6 +1,7 @@
 import random as rd
 
-place = [[0]*7 for i in range(30)]
+place = [[0]*31 for i in range (8)]
+print(place)
 
 class Passenger :
 
@@ -19,13 +20,31 @@ class Passenger :
         def get_bagage(self):
             return self.bagage 
 
-def liste_passager():
-    for i in range(7):
-        for j in range(30):
-            passenger = Passenger(rd.randint(1,7),rd.randint(1,30),rd.randint(0,2))
-            if place[passenger.numerox()][passenger.numeroy()]==1:
-                 passenger = Passenger(rd.randint(1,7),rd.randint(1,30),rd.randint(0,2))
-            else:
-                place[i][j] = 1
-    print(place)
-    print(passenger.get_numerox())
+#le nombre de passager
+compteur = 200
+
+while compteur !=0:
+    #creer un passager avec nbx ,nby , bagage
+    Passenger1 = Passenger(rd.randint(0,7),rd.randint(0,30),rd.randint(0,2))
+
+    x = Passenger1.get_numerox()
+    y = Passenger1.get_numeroy()
+
+    #si la place n'est pas attribuer
+
+    if place[x][y] == 0:
+        place[x][y] = 1
+    #on enleve un passager
+        compteur -= 1
+
+    if place[4][y] == 1:
+        place[4][y] = 0
+        compteur +=1
+
+    #si la place est attribuer
+    if place[x][y]==1:
+        Passenger1 = Passenger(rd.randint(0,7),rd.randint(0,30),rd.randint(0,2))
+
+for i in range(8):
+
+    print(place[i], "\n")
