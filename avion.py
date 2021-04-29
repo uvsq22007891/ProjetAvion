@@ -1,6 +1,3 @@
-import tkinter as tk
-from timeit import default_timer
-
 #####################################################
 # BI TD 4
 # Ruben AMOYAL
@@ -9,6 +6,9 @@ from timeit import default_timer
 # Claude LOUEMBET
 https://github.com/uvsq22007891/ProjetAvion
 #####################################################
+
+import tkinter as tk
+from timeit import default_timer
 
 
 HEIGHT = 750
