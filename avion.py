@@ -1,6 +1,16 @@
 import tkinter as tk
 from timeit import default_timer
 
+#####################################################
+# BI TD 4
+# Ruben AMOYAL
+# Michel ALAND
+# Antony MONCLER
+# Claude LOUEMBET
+https://github.com/uvsq22007891/ProjetAvion
+#####################################################
+
+
 HEIGHT = 750
 WIDTH = 175
 largeur_case = WIDTH // 7
