@@ -6,9 +6,6 @@ HEIGHT = 750
 WIDTH = 175
 largeur_case = WIDTH // 7
 hauteur_case = HEIGHT // 30
-place = [[0]*7 for i in range(30)]
-compteur = 0
-passager1 = [7,20,2]
 
 def creer_avion():
     canvas.grid()
@@ -23,7 +20,7 @@ def creer_avion():
 def creer_passager():
     x0,y0,x1,y1 = 88,12,93,17
     cercle = canvas.create_oval(x0,y0,x1,y1,width=1,fill="black")
-    return [cercle]
+    return cercle
 
 
 def temps():
@@ -34,38 +31,29 @@ def temps():
     canvas.itemconfigure(text_clock, text=str_time)
     racine.after(1000, temps)
 
-def mouvement():
-    """Déplace la balle et ré-appelle la fonction avec un compte-à-rebours"""
-    canvas.move(passager[0],passager[1],passager[2])
-    canvas.after(1000, mouvement)
-       
-def attente_bagage(bagage):
+def mouvement(y):
 
-    if bagage ==0 :
-     pass
-    if bagage ==1:
-        canvas.after(2000,mouvement)
-    if bagage ==2:
-        canvas. after(3000,mouvement)
+    if y != 0 :
+        dx,dy=0,25
+        y = y-1
+        canvas.move(passager1,dx,dy)
+        canvas.after(1000, mouvement(y))
+        
 
 
 
-
-    
 
 
 racine = tk.Tk() # Création de la fenêtre racine
 canvas = tk.Canvas(racine, bg="red", height=HEIGHT, width=WIDTH)
 
 creer_avion()
-
-passager = creer_passager()
+passager1 = creer_passager()
 
 start = default_timer()
 text_clock = canvas.create_text(40, 20)
 temps()
-mouvement()
+mouvement(27)
+
 racine.mainloop() # Lancement de la boucle principale
 
-
-print(place[7][5])
