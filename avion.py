@@ -1,5 +1,6 @@
 import tkinter as tk
 from timeit import default_timer
+import random as rd
 
 #####################################################
 # BI TD 4
@@ -33,9 +34,6 @@ def passager():
     canvas.create_oval(x0,y0,x0+5,y0+5,width=1,fill="black")
     
 
-def mouv(event):
-    pass
-
 def temps():
     now = default_timer() - start
     minutes, seconds = divmod(now, 60)
@@ -44,11 +42,17 @@ def temps():
     canvas.itemconfigure(text_clock, text=str_time)
     racine.after(1000, temps)
 
-def random_siege():
-    pass
-def random_bagage():
+def mouvement():
     pass
 
+def random_siege():
+    pass
+
+def random_bagage():
+    bagage = rd.randint(2)
+    return bagage
+
+        
 
 racine = tk.Tk() # Création de la fenêtre racine
 

@@ -9,7 +9,7 @@ class Passenger :
             self.numerox = numerox
             self.numeroy = numeroy
             self.bagage = bagage
-
+            
             if place[self.numeroy][self.numerox]== True:
                 lp.append([self.numerox,self.numeroy,self.bagage])
             self.lp = lp

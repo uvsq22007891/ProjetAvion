@@ -1,3 +1,4 @@
+from brouillon import attribuer_place
 import random as rd
 
 avion=list(range(180))
@@ -18,3 +19,7 @@ def attribut_place():
         if (avion[i][0] in avion) and (avion[i][1] in avion):
             avion[i][0]=rd.randint(1,6)
             avion[i][1]=rd.randint(1,30)
+            
+    return avion
+
+print(len(attribut_place()))
